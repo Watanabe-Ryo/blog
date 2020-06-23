@@ -10,13 +10,13 @@
     Ensure golden ratio for the hero size while limiting it to some extend to
     the viewport width
   */
-  height: 61.8vh;
-  max-height: 400px;
+  height: 70vh;
+  /* max-height: 500px;*/
 }
 
 .heroDetails {
   position: absolute;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 0);
