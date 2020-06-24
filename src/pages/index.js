@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import Footer from '../components/footer'
 
 class RootIndex extends React.Component {
   render() {
@@ -30,6 +31,7 @@ class RootIndex extends React.Component {
             </ul>
           </div>
         </div>
+          <Footer data={author.node}/>
       </Layout>
     )
   }
@@ -49,7 +51,8 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+          publishDate(formatString: "YYYY.MM.DD")
+          updatedAt(formatString: "YYYY.MM.DD")
           tags
           heroImage {
 	    fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: FILL) {

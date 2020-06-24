@@ -4,8 +4,9 @@ import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-
+import { Link } from 'gatsby'
 import heroStyles from '../components/hero.module.css'
+import Footer from '../components/footer'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -23,7 +24,7 @@ class BlogPostTemplate extends React.Component {
               fluid={post.heroImage.fluid}
             />
           </div>
-          <div className="wrapper">
+          <div className="wrapper" style={{maxWidth: '70%', margin: '0 auto'}}>
             <h1 className="section-headline">{post.title}</h1>
             <p
               style={{
@@ -39,6 +40,7 @@ class BlogPostTemplate extends React.Component {
             />
           </div>
         </div>
+        <Footer />
       </Layout>
     )
   }
@@ -55,7 +57,7 @@ export const pageQuery = graphql`
     }
     contentfulBlogPost(slug: { eq: $slug }) {
       title
-      publishDate(formatString: "MMMM Do, YYYY")
+      publishDate(formatString: "YYYY.MM.DD")
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG

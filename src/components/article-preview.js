@@ -10,7 +10,7 @@ export default ({ article }) => (
     <h3 className={styles.previewTitle}>
       <Link to={`/blog/${article.slug}`}>{article.title}</Link>
     </h3>
-    <small>{article.publishDate}</small>
+      <small> published: {article.publishDate}</small>
     <div
       dangerouslySetInnerHTML={{
         __html: article.description.childMarkdownRemark.html,

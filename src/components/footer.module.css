@@ -1,0 +1,17 @@
+footer{
+  background: linear-gradient(135deg, rgba(49,77,85,1) 0%, rgba(4,21,24,1) 100%);
+  color: white;
+  display: table;
+  width: 100%;
+  min-height: 300px;
+  margin: auto;
+  text-align: center;
+}
+.footerContainer {
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto;
+}
+footer a {
+ margin: 0 10px;
+}
